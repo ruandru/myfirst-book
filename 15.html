@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document
+    </title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .f {
+        float: left;
+    }
+    
+    .r {
+        float: right;
+    }
+    
+    .mulu {
+        width: 1024px;
+        margin: 0 auto;
+    }
+    
+    .title {
+        width: 100%;
+        height: 100px;
+        text-align: center;
+    }
+    
+    .title h1 {
+        color: pink;
+        line-height: 100px;
+    }
+    
+    .zhuti {
+        width: 100%;
+    }
+    
+    .list {
+        width: 350px;
+    }
+    
+    .list dt {
+        width: 100%;
+        height: 30px;
+        background-color: pink;
+        text-align: center;
+        line-height: 30px;
+    }
+    
+    .list dd {
+        padding-left: 30px;
+        position: relative;
+    }
+    
+    .list dd h3 {
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        cursor: pointer;
+    }
+    
+    .list dd h3 i {
+        position: absolute;
+        top: 0;
+        left: 5px;
+        font-style: normal;
+        font-size: 20px;
+    }
+    
+    .list dd ul {
+        width: 100%;
+        display: none;
+    }
+    
+    .list dd ul li {
+        width: 100%;
+        height: 20px;
+    }
+    
+    .list dd ul li a {
+        height: 20px;
+        line-height: 20px;
+        color: #ccc;
+    }
+    
+    .list dd ul li a:hover {
+        color: green;
+    }
+    
+    .details {
+        width: 600px;
+        margin-right: 30px;
+    }
+    
+    .details div:nth-child(1) {
+        line-height: 30px;
+        width: 100%;
+        height: 30px;
+        background-color: rgba(255, 192, 203, 0.83);
+    }
+    
+    .details .content-detaile {
+        width: 100%;
+        height: 600px;
+        background-color: #eee;
+    }
+    
+    .hvr-curl-bottom-right {
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -moz-osx-font-smoothing: grayscale;
+        position: relative;
+    }
+    
+    .hvr-curl-bottom-right:before {
+        pointer-events: none;
+        position: absolute;
+        content: '';
+        height: 0;
+        width: 0;
+        bottom: 0;
+        right: 0;
+        background: white;
+        /* IE9 */
+        background: linear-gradient(315deg, white 45%, #aaaaaa 50%, #cccccc 56%, white 80%);
+        box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.4);
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-property: width, height;
+        transition-property: width, height;
+    }
+    
+    .hvr-curl-bottom-right:hover:before,
+    .hvr-curl-bottom-right:focus:before,
+    .hvr-curl-bottom-right:active:before {
+        width: 50px;
+        height: 50px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="mulu">
+        <div class="content">
+            <div class="title">
+                <h1>myself book</h1>
+            </div>
+            <div class="zhuti">
+                <div class="list f">
+                    <dt>目录</dt>
+                    <dd>
+                        <h3><i>+</i>my first</h3>
+                        <ul>
+                            <li><a href="javascript:;" class="weather">my fitst content</a></li>
+                            <li><a href="javascript:;">my fitst content</a></li>
+                            <li><a href="javascript:;">my fitst content</a></li>
+                            <li><a href="javascript:;">my fitst content</a></li>
+                            <li><a href="javascript:;">my fitst content</a></li>
+                        </ul>
+                    </dd>
+                    <dd>
+                        <h3><i>+</i>my second</h3>
+                        <ul>
+                            <li><a href="javascript:;">my second content</a></li>
+                            <li><a href="javascript:;">my second content</a></li>
+                            <li><a href="javascript:;">my second content</a></li>
+                            <li><a href="javascript:;">my second content</a></li>
+                            <li><a href="javascript:;">my second content</a></li>
+                        </ul>
+                    </dd>
+                    <dd>
+                        <h3><i>+</i>my third</h3>
+                        <ul>
+                            <li><a href="javascript:;">my third content</a></li>
+                            <li><a href="javascript:;">my third content</a></li>
+                            <li><a href="javascript:;">my third content</a></li>
+                            <li><a href="javascript:;">my third content</a></li>
+                            <li><a href="javascript:;">my third content</a></li>
+                        </ul>
+                    </dd>
+                    <dd>
+                        <h3><i>+</i>my four</h3>
+                        <ul>
+                            <li><a href="javascript:;">my four content</a></li>
+                            <li><a href="javascript:;">my four content</a></li>
+                            <li><a href="javascript:;">my four content</a></li>
+                            <li><a href="javascript:;">my four content</a></li>
+                            <li><a href="javascript:;">my four content</a></li>
+                        </ul>
+                    </dd>
+                </div>
+                <div class="details r">
+                    <div>我是book</div>
+                    <div class="content-detaile hvr-curl-bottom-right"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.js"></script>
+<script>
+(function($) {
+    $('.list dd h3').on('click', function(e) {
+        $('.list dd h3').each(function(index, elemt) {
+            $('.list dd h3').siblings('ul').slideUp('slow');
+            $('.list dd h3').children('i').html('+')
+        });
+        $(this).children('i').html('-')
+        $(this).siblings('ul').slideDown('slow');
+        e.preventDefault();
+    })
+    $('.weather').on('click', function() {
+        $.ajax({
+            type: "GET",
+            url: "http://op.juhe.cn/onebox/weather/query?cityname=%E5%8C%97%E4%BA%AC&key=1d354c41b4f9bb2dcdd2816095346c5b",
+            dataType: "jsonp",
+            success: function(data) {
+                var data = data.result.data;
+                $('.content-detaile').append('<p>' + data.pm25.cityName + '</p>' + '<p>' + data.pm25.dateTime + '</p>');
+            }
+        })
+    })
+
+})($)
+</script>
