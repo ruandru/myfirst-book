@@ -112,6 +112,7 @@
     }
     
     .details .content-detaile {
+        position: relative;
         width: 100%;
         height: 600px;
         background-color: #eee;
@@ -153,6 +154,15 @@
         width: 50px;
         height: 50px;
     }
+    
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        scrolling: no;
+    }
     </style>
 </head>
 
@@ -169,8 +179,8 @@
                         <h3><i>+</i>my first</h3>
                         <ul>
                             <li><a href="javascript:;" class="weather">my fitst content</a></li>
-                            <li><a href="javascript:;">my fitst content</a></li>
-                            <li><a href="javascript:;">my fitst content</a></li>
+                            <li><a href="javascript:;" class="yifu">my fitst content</a></li>
+                            <li><a href="javascript:;" class="hah">my fitst content</a></li>
                             <li><a href="javascript:;">my fitst content</a></li>
                             <li><a href="javascript:;">my fitst content</a></li>
                         </ul>
@@ -208,7 +218,8 @@
                 </div>
                 <div class="details r">
                     <div>我是book</div>
-                    <div class="content-detaile hvr-curl-bottom-right"></div>
+                    <div class="content-detaile hvr-curl-bottom-right">
+                    </div>
                 </div>
             </div>
         </div>
@@ -222,12 +233,13 @@
     $('.list dd h3').on('click', function(e) {
         $('.list dd h3').each(function(index, elemt) {
             $('.list dd h3').siblings('ul').slideUp('slow');
-            $('.list dd h3').children('i').html('+')
+            $('.list dd h3').children('i').html('+');
         });
         $(this).children('i').html('-')
         $(this).siblings('ul').slideDown('slow');
         e.preventDefault();
     })
+
     $('.weather').on('click', function() {
         $.ajax({
             type: "GET",
@@ -238,6 +250,22 @@
                 $('.content-detaile').append('<p>' + data.pm25.cityName + '</p>' + '<p>' + data.pm25.dateTime + '</p>');
             }
         })
+    })
+    $('.yifu').on('click', function() {
+        $.ajax({
+            type: "GET",
+            url: "http://op.juhe.cn/onebox/weather/query?cityname=%E5%8C%97%E4%BA%AC&key=1d354c41b4f9bb2dcdd2816095346c5b",
+            dataType: "jsonp",
+            success: function(data) {
+                var data = data.result.data;
+                console.log(data);
+                $('.content-detaile').append('<p>' + data.life.info.chuanyi[0] + '</p>' + '<p>' + data.life.info.chuanyi[1] + '</p>');
+            }
+        })
+    })
+    $('.hah').on('click', function() {
+        $('<iframe></iframe>').appendTo('.content-detaile');
+        $('iframe').attr('src', '15.html');
     })
 
 })($)
